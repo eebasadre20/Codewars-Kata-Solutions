@@ -18,13 +18,12 @@ class DoTheOperation
   end
 
   def do_math
-    total = 0
     splitted_str.each do | a |
       extract_str( a )
     end
 
     do_sorting
-    total = do_calculation.round
+    do_calculation.round
   end
 
   private
@@ -85,7 +84,6 @@ class DoTheOperation
   def do_calculation
     index = 0
     total = 0.0
-    total_temp = 0
 
     num_list_length = num_list.length
 
@@ -102,7 +100,7 @@ class DoTheOperation
 
   # A method for debugging purposes
   def output
-    puts "Letter sequence: #{@temp_letter}"
-    puts "Number sequence: #{@temp}"
+    puts "Letter sequence: #{char_list}"
+    puts "Number sequence: #{num_list}"
   end
 end
