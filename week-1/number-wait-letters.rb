@@ -1,3 +1,7 @@
+# PROBLEM --> https://www.codewars.com/kata/number-number-dot-dot-dot-wait-letter/train/ruby
+# Click the link for more information
+# about the Kata problem.
+
 def do_math(s)
     splitted_str = s.split(' ')
     operation = DoTheOperation.new( splitted_str )
