@@ -1,3 +1,7 @@
+# PROBLEM --> https://www.codewars.com/kata/directions-reduction/train/ruby
+# Click the link for more information
+# about the Kata problem.
+
 require 'pry'
 
 def dirReduc( arr )
