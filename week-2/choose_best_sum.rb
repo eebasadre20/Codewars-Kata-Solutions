@@ -1,3 +1,7 @@
+# PROBLEM --> https://www.codewars.com/kata/best-travel/train/ruby
+# Click the link for more information
+# about the Kata problem.
+
 require 'pry'
 
 def choose_best_sum( total, number_of_town, distance_list )
