@@ -58,7 +58,7 @@ end
 
 # Improvement:
 # In my old solution I found out that why I keep failing
-# because I didn't get all set of combinations
+# because I didn't get all exact set of combinations
 # example: [91,74,73,85,73,81,87], towns = 4
 #
 # 1st set:               2nd set:
@@ -68,10 +68,11 @@ end
 # [91,74,73,87] = 325    ...
 #
 # If you notice in the first set
-# I didn't get all the combination
+# there are some missing combination
 # then jump directly to the 2nd set.
 #
-# So, here's the final solution:
+# I found a combination method in array
+# and used it. So, here's the final solution:
 
 def choose_best_sum( total, number_of_town, distance_list )
 
@@ -86,7 +87,7 @@ def choose_best_sum( total, number_of_town, distance_list )
   # the combination of the array
   # then iterate each combination
 
-  distance_list.combination(number_of_town).to_a.each do | combination |
+  distance_list.compact.combination(number_of_town).to_a.each do | combination |
     # sum up the combination
     temp_sum = combination.inject(:+)
 
@@ -109,15 +110,23 @@ def choose_best_sum( total, number_of_town, distance_list )
   sum == 0 ? nil : sum
 end
 
-# ts = [50, 55, 56, 57, 58]
-# ts = [91, 74, 73, 85, 73, 81, 87]
-
-ts = [  91,
-        74,
-        73,
-        85,
-        73,
-        81,
-        87  ]
-possible_list_dis  = choose_best_sum( 700, 6, ts)
+ts = [91,74,73,85,73,81,87,50,100,34,85,230,9,24,78,98]
+possible_list_dis  = choose_best_sum( 640, 6, ts)
 puts "LIST --> #{possible_list_dis}"
+
+
+# Additional test:
+# Normal test with a lengthy array
+ts = [91, 74, 73, 85, 73, 81, 87, 50, 100, 34, 85, 230, 9, 24, 78, 98]
+Test.assert_equals(choose_best_sum( 385, 6, ts),385)
+
+# Test with possibility to return nil
+ts = [91, 74, 73, 85, 73, 81, 87, 50, 100, 34, 85, 230, 9, 24, 78, 98]
+Test.assert_equals(choose_best_sum( 150, 6, ts),nil)
+
+# Test with nil inside the array
+# even though it was stated that
+# it's all possible integers
+ts = [91, 74,nil, 73, 85, 73, 81, nil, 87, nil, 50, 100,nil, 34, 85, 230, 9, 24, 78, 98]
+Test.assert_equals(choose_best_sum( 301, 6, ts),301)
+
