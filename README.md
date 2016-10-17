@@ -7,5 +7,8 @@
 - https://www.codewars.com/kata/best-travel/train/ruby
 - https://www.codewars.com/kata/directions-reduction/train/ruby
 
+##### Random codes
+Just trying out some simple problems or algorithms
+
 
 _Feel free to give feedback :)_
