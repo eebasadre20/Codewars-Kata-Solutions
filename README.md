@@ -8,6 +8,9 @@
 - https://www.codewars.com/kata/directions-reduction/train/ruby
 
 ##### Random codes
+- largest number - recursion
+- binary search - recursion
+
 Just trying out some simple problems or algorithms
 
 
