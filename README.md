@@ -9,7 +9,7 @@
 
 ##### Week 3
 - https://www.codewars.com/kata/convert-string-to-camel-case/train/ruby
-- 
+- https://www.codewars.com/kata/first-non-repeating-letter
 
 ##### Random codes
 - largest number - recursion
