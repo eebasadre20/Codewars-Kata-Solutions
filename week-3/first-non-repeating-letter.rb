@@ -1,3 +1,7 @@
+# PROBLEM --> https://www.codewars.com/kata/first-non-repeating-letter
+# Click the link for more information
+# about the Kata problem.
+
 def  first_non_repeating_letter(s)
   # Code go here
   return s if s.empty?
