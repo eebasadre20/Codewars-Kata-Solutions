@@ -7,6 +7,10 @@
 - https://www.codewars.com/kata/best-travel/train/ruby
 - https://www.codewars.com/kata/directions-reduction/train/ruby
 
+##### Week 3
+- https://www.codewars.com/kata/convert-string-to-camel-case/train/ruby
+- 
+
 ##### Random codes
 - largest number - recursion
 - binary search - recursion
