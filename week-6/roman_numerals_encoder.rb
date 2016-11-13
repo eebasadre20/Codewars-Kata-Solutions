@@ -1,0 +1,20 @@
+require 'pry'
+
+def solution( number )
+  RomanNumeralsDecoder.new.encoder( number )
+end
+
+class RomanNumeralsDecoder
+  NUMERALS = { M: 1000, CM: 900, D: 500, CD: 400, C: 100, XC: 90,
+               L: 50, XL: 40, X: 10, IX: 9, V: 5, IV: 4, I: 1 }
+
+  def encoder( number )
+    return "" if number <= 0
+
+    NUMERALS.each do | key, value |
+      return key.to_s + encoder( number - value ) if number >= val
+    end
+  end
+end
+
+puts solution( 1996 )
