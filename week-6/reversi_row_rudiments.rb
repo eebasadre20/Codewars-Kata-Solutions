@@ -1,7 +1,10 @@
+# PROBLEM --> https://www.codewars.com/kata/reversi-row-rudiments/train/ruby
+# Click the link for more information
+# about the Kata problem.
+
 require 'pry'
 
 def reversi_row( moves )
-  puts "#{moves}"
   ReversiRowRudiments.new( moves ).do_the_moves
 end
 
@@ -22,10 +25,16 @@ class ReversiRowRudiments
   def evaluate_moves( moves )
     x = 0
     while( x < moves.length )
+
+      # do the next iteration
       if @_moves[moves[x]] != '.'
         x = x + 1
         next
       end
+
+      # player 1 if player == true
+      # player 2 if player == false
+      # change either '*' or 'O' if left and right element is true
 
       if @player
         @_moves[moves[x]] = '*'
@@ -45,10 +54,12 @@ class ReversiRowRudiments
 
   private
 
+  # checking left elements of the current position
   def left_element?( position, symbol )
     @_moves[position - 2] == symbol && @_moves[position - 1] != '.' if position > 1
   end
 
+  # checking right elements of the current position
   def right_element?( position, symbol )
     @_moves[position + 2] == symbol && @_moves[position + 1] != '.' if position < 7
   end
