@@ -34,6 +34,7 @@ class ReversiRowRudiments
 
       # player 1 if player == true
       # player 2 if player == false
+      # change either '*' or 'O' if left and right element is true
 
       if @player
         @_moves[moves[x]] = '*'
