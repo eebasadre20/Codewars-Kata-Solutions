@@ -1,3 +1,7 @@
+# PROBLEM --> https://www.codewars.com/kata/roman-numerals-encoder/train/ruby
+# Click the link for more information
+# about the Kata problem.
+
 require 'pry'
 
 def solution( number )
@@ -11,6 +15,10 @@ class RomanNumeralsDecoder
   def encoder( number )
     return "" if number <= 0
 
+    # Iterate the declared constant numerals
+    # if the number that pass to the encoder is greater or equal
+    # of the value append the key ( which is already string )
+    # and do recurrsion with substracting the number and value of the Key
     NUMERALS.each do | key, value |
       return key.to_s + encoder( number - value ) if number >= val
     end
